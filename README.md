@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# README - Proyecto de Login
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación de login desarrollada con tecnologías MERN (MongoDB, Express, React, Node.js). La aplicación permite a los usuarios registrarse, iniciar sesión, y cerrar sesión, registrando la hora de inicio de sesión en la base de datos.
 
-## Available Scripts
+## Requisitos previos
 
-In the project directory, you can run:
+Antes de ejecutar la aplicación, asegúrate de tener instalado lo siguiente:
 
-### `npm start`
+* Node.js:  [Descargar e instalar Node.js](https://nodejs.org/es)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Configuraciones para la base de datos en MongoDB Cloud
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A continuación, se presenta una guía para configurar MongoDB Cloud y conectarlo a tu proyecto. Sigue estos pasos para configurar la base de datos en la nube:
 
-### `npm test`
+1. Ir a MongoDB Cloud
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+	Accede al sitio web de MongoDB Cloud en el siguiente enlace:
+[https://www.mongodb.com/products/platform/cloud](https://www.mongodb.com/products/platform/cloud)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Iniciar sesión
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+	Si aún no tienes una cuenta, puedes registrarte con tu cuenta de Google o GitHub. Si ya tienes una cuenta, inicia sesión con tus credenciales.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+3. Crear un proyecto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+	Una vez hayas iniciado sesión, dirígete a la barra lateral izquierda y selecciona "Projects". Luego, haz clic en "New Project". Asigna un nombre descriptivo para tu proyecto, por ejemplo, "Pasantia-Login", y haz clic en "Create Project".
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Crear un Cluster
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+	Después de haber creado el proyecto, selecciona "Build a Database" para crear un nuevo clúster. Escoge el servicio gratuito (MO) para aprender a explorar MongoDB en un entorno en la nube. Elige una región que sea cercana a tu ubicación, como "Sao Paulo". Asigna un nombre a tu clúster, por ejemplo, "MyCluster", y luego haz clic en "Crear" o "Create".
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Configurar la conexión
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+	Una vez se haya creado el clúster, se te pedirá que configuremos la autenticación de la conexión. Debes crear un nombre de usuario y contraseña para esta conexión (asegúrate de guardar la contraseña en un archivo de texto por ahora). Haz clic en "Crear Usuario", luego en "Terminar y Cerrar", y finalmente, en "Ir a la Base de Datos".
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6. Conectar el Cluster
 
-### Analyzing the Bundle Size
+	Haz clic en "Connect" en la página del clúster. Luego, en la sección "Connect to your application", selecciona "Drivers". Aquí encontrarás la cadena de conexión para conectar tu backend en Node.js con Mongoose. Copia esa cadena y agrégala al archivo ".env" de tu proyecto, será algo como:
+`MONGO_URL='mongodb+srv://<nombreusuario>:<password>@mycluster.bsniy72.mongodb.net/?retryWrites=true&w=majority'`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+7. Ver la base de datos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+	Una vez que hayas establecido la conexión, puedes acceder a la vista de monitoreo del clúster. Dirígete a "View Monitoring" y luego selecciona "Collections". Aquí deberías poder ver los registros de los usuarios que se loguean en tu aplicación.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Pasos para ejecutar el proyecto
 
-### Deployment
+1. Clonar el repositorio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+	```git clone https://github.com/GeronimoTilleria/Pasantia-Login.git```
 
-### `npm run build` fails to minify
+2. Instalar dependencias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+	En la raíz de las carpetas client y server, ejecuta los siguientes comandos para instalar las dependencias tanto en el backend como en el frontend desde dos terminales diferentes:
+	* Terminal client:
+		
+		```cd client```
+
+		```npm install```
+	
+	* Terminal server:
+		
+		```cd server```
+
+		```npm install```
+
+3. Instala nodemon globalmente (si aún no lo tienes instalado):
+
+	```npm install -g nodemon```
+
+
+4. Configurar variables de entorno
+
+	En el directorio backend, renombra el archivo .env copy a .env para que las variables de entorno se carguen correctamente.
+
+	Luego, abre el archivo .env y asegúrate de que contenga tu cadena de conexión:
+	
+	```MONGO_URL='mongodb+srv://<nombreusuario>:<password>@mycluster.bsniy72.mongodb.net/?retryWrites=true&w=majority' ```
+	
+
+
+5. Iniciar el servidor backend
+
+	En el directorio backend, ejecuta el siguiente comando para iniciar el servidor:
+
+	```nodemon server.js```
+
+
+6. Iniciar la aplicación frontend
+
+	En el directorio frontend, ejecuta el siguiente comando para iniciar la aplicación frontend:
+
+	```npm start```
+
+
+## Guía de uso
+
+1. Registro e inicio de sesión
+
+	Regístrate con una nueva cuenta y luego inicia sesión:
+
+
+## Creditos
+
+Este proyecto fue creado por Geronimo Tilleria ([GitHub](https://github.com/GeronimoTilleria)).
