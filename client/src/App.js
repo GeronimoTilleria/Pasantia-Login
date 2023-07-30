@@ -35,21 +35,21 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
+        <nav className='navbar bg-body-tertiary d-flex justify-content-end'>
+          <ul className='nav justify-content-center'>
             {isLoggedIn ? (
               <>
-                <li>
+                <li className='nav-item'>
                   <LogoutButton setIsLoggedIn={setIsLoggedIn} />
                 </li>
               </>
             ) : (
               <>
-                <li>
-                  <a href="/login">Iniciar sesión</a>
+                <li className='nav-item'>
+                  <a className='nav-link' href="/login">Iniciar sesión</a>
                 </li>
-                <li>
-                  <a href="/create">Crear cuenta</a>
+                <li className='nav-item'>
+                  <a className='nav-link' href="/create">Crear cuenta</a>
                 </li>
               </>
             )}
@@ -59,7 +59,7 @@ function App() {
           <Route path="/login" element={<LoginForm setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/create" element={<CreateAccountForm />} />
           <Route path="/home" element={isLoggedIn ? <Home isLoggedIn={isLoggedIn} /> : <Navigate to="/login" />} />
-          <Route path="*" element={<h2>Página no encontrada</h2>} />
+          <Route path="*" element={<h2>Inicio Página</h2>} />
         </Routes>
       </div>
     </Router>

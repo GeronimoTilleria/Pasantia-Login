@@ -29,21 +29,29 @@ const LoginForm = ({ setIsLoggedIn }) => {
         }
     };
     return (
-        <div>
-            <h2>Iniciar sesión</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="username">Nombre de usuario</label>
-                    <input type="text" id="username" name="username" onChange={handleChange} />
-                </div>
-                <div>
-                    <label htmlFor="password">Contraseña</label>
-                    <input type="password" id="password" name="password" onChange={handleChange} />
-                </div>
-                <button type="submit">Iniciar sesión</button>
-                {error && <p>{error}</p>}
-            </form>
+        <div className='container-fluid d-flex align-items-center justify-content-center container-main'>
+            <div className='bg-light p-5 rounded'>
+                <h2 className='text-center mb-4'>Iniciar sesión</h2>
+                <form onSubmit={handleSubmit}>
+                    <div className='mb-3'>
+                        <label className='form-label' htmlFor="username">Nombre de usuario</label>
+                        <input className='form-control' type="text" id="username" name="username" onChange={handleChange} />
+                    </div>
+                    <div className='mb-4'>
+                        <label className='form-label' htmlFor="password">Contraseña</label>
+                        <input className='form-control' type="password" id="password" name="password" onChange={handleChange} />
+                    </div>
+                    <div className="row">
+                        <div className="col text-center">
+                            <button className='btn btn-primary' type="submit">Iniciar sesión</button>
+                        </div>
+                    </div>
+                    
+                    {error && <p>{error}</p>}
+                </form>
+            </div>
         </div>
+
     )
 }
 

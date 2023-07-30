@@ -10,7 +10,7 @@ const LogoutButton = ({ setIsLoggedIn }) => {
         navigate('/login');
     };
     return (
-        <button onClick={handleLogout}>Cerrar sesión</button>
+        <button className='btn btn-warning me-4' onClick={handleLogout}>Cerrar sesión</button>
     )
 }
 
