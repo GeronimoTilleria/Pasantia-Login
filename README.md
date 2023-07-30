@@ -1,4 +1,4 @@
-# README - Proyecto de Login
+# README - Login Pasantía
 
 Este proyecto es una aplicación de login desarrollada con tecnologías MERN (MongoDB, Express, React, Node.js). La aplicación permite a los usuarios registrarse, iniciar sesión, y cerrar sesión, registrando la hora de inicio de sesión en la base de datos.
 
