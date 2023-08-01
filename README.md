@@ -2,13 +2,49 @@
 
 Este proyecto es una aplicación de login desarrollada con tecnologías MERN (MongoDB, Express, React, Node.js). La aplicación permite a los usuarios registrarse, iniciar sesión, y cerrar sesión, registrando la hora de inicio de sesión en la base de datos.
 
+Ejecute este proyecto en un Sistema Operativo Windows.
+
 ## Requisitos previos
 
 Antes de ejecutar la aplicación, asegúrate de tener instalado lo siguiente:
 
 * Node.js:  [Descargar e instalar Node.js](https://nodejs.org/es)
 
-## Configuraciones para la base de datos en MongoDB Cloud
+## Procedimientos para iniciar
+
+1. Clonar el repositorio
+
+	```git clone https://github.com/GeronimoTilleria/Pasantia-Login.git```
+
+2. Instalar dependencias
+
+	Estando dentro del proyecto abre dos terminales, ejecuta los siguientes comandos para instalar las dependencias tanto en el backend como en el frontend:
+	* Terminal client:
+		
+		```cd client```
+
+		```npm install```
+	
+	* Terminal server:
+		
+		```cd server```
+
+		```npm install```
+
+3. Instala nodemon globalmente (si aún no lo tienes instalado):
+
+	```npm install -g nodemon```
+
+	En el terminal de server.
+
+4. Configurar variables de entorno
+
+	Tanto en el directorio client y el directorio server se encuentra un archivo llamado ".env copy" (variables de entorno), renombra ese archivo a ".env" en ambos directorios para que las variables de entorno se carguen correctamente.
+
+
+## Configuraciones para la base de datos en MongoDB Cloud 
+
+(Existen opciones para instalar MongoDB en tu ordenador; sin embargo, para evitar consumir recursos de disco, optamos por gestionar la base de datos a través de MongoDB Cloud en línea.)
 
 A continuación, se presenta una guía para configurar MongoDB Cloud y conectarlo a tu proyecto. Sigue estos pasos para configurar la base de datos en la nube:
 
@@ -40,8 +76,10 @@ A continuación, se presenta una guía para configurar MongoDB Cloud y conectarl
 
 6. Conectar el Cluster
 
-	Haz clic en "Connect" en la página del clúster. Luego, en la sección "Connect to your application", selecciona "Drivers". Aquí encontrarás la cadena de conexión para conectar tu backend en Node.js con Mongoose. Copia esa cadena y agrégala al archivo ".env" de tu proyecto, será algo como:
-`MONGO_URL='mongodb+srv://<nombreusuario>:<password>@mycluster.bsniy72.mongodb.net/?retryWrites=true&w=majority'`
+	Haz clic en "Connect" en la página del clúster. Luego, en la sección "Connect to your application", selecciona "Drivers". Aquí encontrarás la cadena de conexión para conectar tu backend (server) con la base de datos. Copia esa cadena y agrégala al archivo ".env" que por ahora se llama ".env copy" (en la carpeta server) de tu proyecto. La cadena de conexion de ir procedido por el nombre de la variable "MONGO_URL" seguido de "=" (la cadena de conexion debe ir dentro de comillas) quedando como algo así:
+	`MONGO_URL='mongodb+srv://<nombreusuario>:<password>@mycluster.bsniy72.mongodb.net/?retryWrites=true&w=majority'`
+
+	No olvide reemplazar "<password>" por la contraseña que habia guardado en un archivo de texto.
 
 
 7. Ver la base de datos
@@ -49,50 +87,17 @@ A continuación, se presenta una guía para configurar MongoDB Cloud y conectarl
 	Una vez que hayas establecido la conexión, puedes acceder a la vista de monitoreo del clúster. Dirígete a "View Monitoring" y luego selecciona "Collections". Aquí deberías poder ver los registros de los usuarios que se loguean en tu aplicación.
 
 
+
 ## Pasos para ejecutar el proyecto
 
-1. Clonar el repositorio
-
-	```git clone https://github.com/GeronimoTilleria/Pasantia-Login.git```
-
-2. Instalar dependencias
-
-	En la raíz de las carpetas client y server, ejecuta los siguientes comandos para instalar las dependencias tanto en el backend como en el frontend desde dos terminales diferentes:
-	* Terminal client:
-		
-		```cd client```
-
-		```npm install```
-	
-	* Terminal server:
-		
-		```cd server```
-
-		```npm install```
-
-3. Instala nodemon globalmente (si aún no lo tienes instalado):
-
-	```npm install -g nodemon```
-
-
-4. Configurar variables de entorno
-
-	En el directorio backend, renombra el archivo .env copy a .env para que las variables de entorno se carguen correctamente.
-
-	Luego, abre el archivo .env y asegúrate de que contenga tu cadena de conexión:
-	
-	```MONGO_URL='mongodb+srv://<nombreusuario>:<password>@mycluster.bsniy72.mongodb.net/?retryWrites=true&w=majority' ```
-	
-
-
-5. Iniciar el servidor backend
+1. Iniciar el servidor backend
 
 	En el directorio backend, ejecuta el siguiente comando para iniciar el servidor:
 
 	```nodemon server.js```
 
 
-6. Iniciar la aplicación frontend
+2. Iniciar la aplicación frontend
 
 	En el directorio frontend, ejecuta el siguiente comando para iniciar la aplicación frontend:
 
@@ -103,9 +108,5 @@ A continuación, se presenta una guía para configurar MongoDB Cloud y conectarl
 
 1. Registro e inicio de sesión
 
-	Regístrate con una nueva cuenta y luego inicia sesión:
+	Regístrate con una nueva cuenta y luego inicia sesión. Observe en su base de datos que queda registrado el usuario y el momento en que inicia sesión.
 
-
-## Creditos
-
-Este proyecto fue creado por Geronimo Tilleria ([GitHub](https://github.com/GeronimoTilleria)).
