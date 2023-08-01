@@ -46,7 +46,7 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado lo siguiente:
 
 ## Configuraciones para la base de datos en MongoDB Cloud 
 
-(Existen opciones para instalar MongoDB en tu ordenador; sin embargo, para evitar consumir recursos de disco (en caso de que no lo tenga instalado), optamos por gestionar la base de datos a través de MongoDB Cloud en línea para esta prueba. Pero si lo tiene instalado y quiere optar por utilizar el MongoDBCompass (gestor de MongoDB), debes ir al punto 6 de esta seccion donde la variable MONGO_URL lo que contendra es la URL que apunta a la base de datos local, esa URL lo puedes encontrar abriendo el MongoDBCompass, quedaria algo asi: MONGO_URL='http://localhost:27017', esto es lo que debera ir en el archivo .env del directorio server)
+(Existen opciones para instalar MongoDB en tu ordenador; sin embargo, para evitar consumir recursos de disco (en caso de que no lo tenga instalado), optamos por gestionar la base de datos a través de MongoDB Cloud en línea para esta prueba. Pero si lo tiene instalado y quiere optar por utilizar el MongoDBCompass (gestor de MongoDB), debes ir al punto 6 de esta sección (los demas puntos de esta sección los ignora) donde la variable MONGO_URL lo que contendra es la URL que apunta a la base de datos local, esa URL lo puedes encontrar abriendo el MongoDBCompass, quedaría algo así: MONGO_URL='http://localhost:27017', esto es lo que deberá ir en el archivo .env del directorio server)
 
 A continuación, se presenta una guía para configurar MongoDB Cloud y conectarlo a tu proyecto. Sigue estos pasos para configurar la base de datos en la nube:
 
