@@ -5,7 +5,7 @@ const Home = ({ isLoggedIn }) => {
         <div className='container-fluid d-flex align-items-center justify-content-center container-main'>
             <div>
                 <h2>Bienvenido a la página de inicio</h2>
-                {isLoggedIn && <p className='text-center'>¡Has iniciado sesión correctamente!</p>}
+                {isLoggedIn && <p className='text-center'>¡HOLA MUNDO!. Has iniciado sesión correctamente</p>}
             </div>
         </div>
 
