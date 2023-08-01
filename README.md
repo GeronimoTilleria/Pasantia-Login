@@ -91,16 +91,16 @@ A continuación, se presenta una guía para configurar MongoDB Cloud y conectarl
 
 ## Pasos para ejecutar el proyecto
 
-1. Iniciar el servidor backend
+1. Iniciar el servidor
 
-	En el directorio backend, ejecuta el siguiente comando para iniciar el servidor:
+	En la terminal del directorio server, ejecuta el siguiente comando para iniciar el servidor:
 
 	```nodemon server.js```
 
 
-2. Iniciar la aplicación frontend
+2. Iniciar la aplicación frontend (client)
 
-	En el directorio frontend, ejecuta el siguiente comando para iniciar la aplicación frontend:
+	En la terminal del directorio client, ejecuta el siguiente comando para iniciar la aplicación frontend:
 
 	```npm start```
 
