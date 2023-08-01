@@ -35,7 +35,7 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado lo siguiente:
 
 	```npm install -g nodemon```
 
-	En el terminal de server.
+	En la terminal de server.
 
 4. Configurar variables de entorno
 
@@ -79,7 +79,7 @@ A continuación, se presenta una guía para configurar MongoDB Cloud y conectarl
 	Haz clic en "Connect" en la página del clúster. Luego, en la sección "Connect to your application", selecciona "Drivers". Aquí encontrarás la cadena de conexión para conectar tu backend (server) con la base de datos. Copia esa cadena y agrégala al archivo ".env" que por ahora se llama ".env copy" (en la carpeta server) de tu proyecto. La cadena de conexion de ir procedido por el nombre de la variable "MONGO_URL" seguido de "=" (la cadena de conexion debe ir dentro de comillas) quedando como algo así:
 	`MONGO_URL='mongodb+srv://<nombreusuario>:<password>@mycluster.bsniy72.mongodb.net/?retryWrites=true&w=majority'`
 
-	No olvide reemplazar "<password>" por la contraseña que habia guardado en un archivo de texto.
+	No olvide reemplazar "<\password>" por la contraseña que habia guardado en un archivo de texto.
 
 
 7. Ver la base de datos
