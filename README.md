@@ -44,7 +44,7 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado lo siguiente:
 
 ## Configuraciones para la base de datos en MongoDB Cloud 
 
-(Existen opciones para instalar MongoDB en tu ordenador; sin embargo, para evitar consumir recursos de disco, optamos por gestionar la base de datos a través de MongoDB Cloud en línea.)
+(Existen opciones para instalar MongoDB en tu ordenador; sin embargo, para evitar consumir recursos de disco, optamos por gestionar la base de datos a través de MongoDB Cloud en línea para esta prueba.)
 
 A continuación, se presenta una guía para configurar MongoDB Cloud y conectarlo a tu proyecto. Sigue estos pasos para configurar la base de datos en la nube:
 
