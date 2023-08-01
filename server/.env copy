@@ -1,4 +1,5 @@
-# MONGO_URL="mongodb://localhost/RegisterLoginDB"
-MONGO_URL='mongodb+srv://gtilleria39:8zaMjrjTrWgkdG5M@mycluster.bsniy72.mongodb.net/?retryWrites=true&w=majority'
 PUERTO=8000
 SECRET_KEY="keepThisSecret"
+
+# Cadena de conexion MONGO_URL en la siguiente línea
+
