@@ -1,5 +1,5 @@
 PUERTO=8000
 SECRET_KEY="keepThisSecret"
 
-# Agregar cadena de conexion MONGO_URL en la siguiente línea.
+# variable MONGO_URL en la siguiente línea.
 
