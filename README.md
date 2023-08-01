@@ -1,4 +1,4 @@
-# README - Login Pasantía
+# Login con MERN - Pasantía
 
 Este proyecto es una aplicación de login desarrollada con tecnologías MERN (MongoDB, Express, React, Node.js). La aplicación permite a los usuarios registrarse, iniciar sesión, y cerrar sesión, registrando la hora de inicio de sesión en la base de datos.
 
@@ -77,6 +77,7 @@ A continuación, se presenta una guía para configurar MongoDB Cloud y conectarl
 6. Conectar el Cluster
 
 	Haz clic en "Connect" en la página del clúster. Luego, en la sección "Connect to your application", selecciona "Drivers". Aquí encontrarás la cadena de conexión para conectar tu backend (server) con la base de datos. Copia esa cadena y agrégala al archivo ".env" (en la carpeta server) de tu proyecto. La cadena de conexion debe ir procedido por el nombre de la variable "MONGO_URL" seguido de "=" (la cadena de conexion debe ir entre de comillas) quedando como algo así:
+	
 	`MONGO_URL='mongodb+srv://<nombreusuario>:<password>@mycluster.bsniy72.mongodb.net/?retryWrites=true&w=majority'`
 
 	No olvide reemplazar "&lt;password&gt;" por la contraseña que habia guardado en un archivo de texto.
